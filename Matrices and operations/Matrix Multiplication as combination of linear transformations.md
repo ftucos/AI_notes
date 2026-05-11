@@ -49,7 +49,7 @@ $$
 \end{bmatrix}}\color{orange}{-1}\color{red}{\begin{bmatrix}
 0 \\
 1
-\end{bmatrix}}=\begin{bmatrix}
+\end{bmatrix}}=\color{black}\begin{bmatrix}
 \color{purple}{2+0} \\
 \color{orange}{0-1}
 \end{bmatrix}=\begin{bmatrix}
@@ -115,7 +115,7 @@ $$
 Consequently:
 
 $$
-\boldsymbol{\vec{v}}= \color{purple}{2}\color{blue}{\boldsymbol{\hat{i}}} + \color{orange}{(-1)}\color{red}{\boldsymbol{\hat{j}}} = \begin{bmatrix}
+\boldsymbol{\vec{v}}= \color{purple}{2}\color{blue}{\boldsymbol{\hat{i}}} + \color{orange}{(-1)}\color{red}{\boldsymbol{\hat{j}}} = \color{black}\begin{bmatrix}
 \color{blue}{2}&\color{red}{1} \\
 \color{blue}{0}&\color{red}{3}
 \end{bmatrix}\begin{bmatrix}
@@ -187,9 +187,9 @@ $$
 
 $$
 \begin{aligned}
-2\color{blue}{x} + 5\color{red}{y} + 3\color{green}{z} &= -3\\
-4\color{blue}{x} + 0\color{red}{y} + 8\color{green}{z} &= 0\\
-\color{blue}{x}  + 3\color{red}{y} + 0\color{green}{z}
+2\color{blue}{x}\color{black} + 5\color{red}{y}\color{black} + 3\color{green}{z}\color{black} &= -3\\
+4\color{blue}{x}\color{black} + 0\color{red}{y}\color{black} + 8\color{green}{z}\color{black} &= 0\\
+\color{blue}{x}\color{black}  + 3\color{red}{y}\color{black} + 0\color{green}{z}\color{black}
  &= 2
 \end{aligned}
 $$
