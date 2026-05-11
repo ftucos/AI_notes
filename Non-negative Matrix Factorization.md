@@ -11,7 +11,7 @@ where:
 - all entries are **non-negative**
 - $k$ is $k \ll \min(n,p)$. $k$ can be chosen with the elbow method or other heuristics. The approximation error for $\boldsymbol{A}$ decreases monotonically with the number latent dimensions chosen.
 
-![[image 5.png]]
+![NMF components](images/image%205.png)
 NMF expresses therefore each observation as a **sum of non-negative components**:
 $\boldsymbol{x}i \;\approx\; \boldsymbol{W}h_i$
 - reconstruction is **purely additive**
@@ -23,11 +23,10 @@ $\boldsymbol{x}i \;\approx\; \boldsymbol{W}h_i$
 NMF is **not a closed-form decomposition**.
 It is solved by minimizing a cost function:
 $$
-
-$$
-$$\min_{\boldsymbol{W},\boldsymbol{H}\ge 0}
+\min_{\boldsymbol{W},\boldsymbol{H}\ge 0}
 \;\;
-\|\boldsymbol{X}-\boldsymbol{W}\boldsymbol{H}\|^2$$
+\|\boldsymbol{X}-\boldsymbol{W}\boldsymbol{H}\|^2
+$$
 or alternative divergences (e.g. KL divergence).
 Key consequences:
 - the solution is **not unique**

@@ -26,7 +26,8 @@ where:
 - result $y$ has shape $(n,)$.
 
 
-$$X=
+$$
+X=
 \begin{bmatrix}
 1 & 2\\
 3 & 4\\
@@ -41,7 +42,8 @@ w=
 100
 \end{bmatrix},
 \quad
-b=0.5$$
+b=0.5
+$$
 
 Dot product for first row:
 $y_1 = 1\cdot 10 + 2\cdot 100 + 0.5 = 210.5$

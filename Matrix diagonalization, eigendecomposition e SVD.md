@@ -26,24 +26,29 @@ where:
 - $\boldsymbol{\Lambda}$: diagonal matrix of eigenvalues (scaling)
 - $\boldsymbol{Q}^{-1}$: inverse change of basis
 
-$$\boldsymbol{A}
+$$
+\boldsymbol{A}
 =
 \underbrace{\boldsymbol{Q}}_{\text{change basis}}\,
 \underbrace{\boldsymbol{\Lambda}}_{\text{scale axes}}\,
-\underbrace{\boldsymbol{Q}^{-1}}_{\text{restore basis}}$$
+\underbrace{\boldsymbol{Q}^{-1}}_{\text{restore basis}}
+$$
 ### When the matrix can be eigendecomposed
 4. **All eigenvalues are distinct**
-5. **Some eigenvalues are repeated **but the algebric multiplicity matches the geometric multiplicity
+5. **Some eigenvalues are repeated**, but the algebric multiplicity matches the geometric multiplicity
 
-# Singular Value Decomposition (SVD)
+## Singular Value Decomposition (SVD)
 The **Singular Value Decomposition** is a more general matrix factorization that extends eigendecomposition to:
 - non-square matrices
 - rank-deficient matrices
 - matrices that are not diagonalizable
 
-> [!note]+ **Note on non-square  and rank-deficien matrices**
+> [!NOTE]
+> **Note on non-square and rank-deficient matrices**
 > Rectangular matrices can be conceptualized as transformations that suppress or appends some dimensions. SVD handles that
-> $$\boldsymbol{A}\boldsymbol{x} =
+>
+> $$
+> \boldsymbol{A}\boldsymbol{x} =
 > \begin{bmatrix}
 > 1 & 0 \\
 > 0 & 1 \\
@@ -58,8 +63,11 @@ The **Singular Value Decomposition** is a more general matrix factorization that
 > x_1 \\
 > x_2 \\
 > 0
-> \end{bmatrix}$$
-> $$\boldsymbol{B}\boldsymbol{y} =
+> \end{bmatrix}
+> $$
+>
+> $$
+> \boldsymbol{B}\boldsymbol{y} =
 > \begin{bmatrix}
 > 1 & 0 & 0 \\
 > 0 & 1 & 0
@@ -73,7 +81,8 @@ The **Singular Value Decomposition** is a more general matrix factorization that
 > \begin{bmatrix}
 > y_1 \\
 > y_2
-> \end{bmatrix}$$
+> \end{bmatrix}
+> $$
 
 The decomposition is:
 $\boldsymbol{A} = \boldsymbol{U}\boldsymbol{\Sigma}\boldsymbol{V}^T$
@@ -84,10 +93,11 @@ where:
 
 Key differences from eigendecomposition:
 - left and right singular vectors are **different**
-- singular vectors are **always orthogonal **(eigenvectors instead just need to be linearly independent)
+- singular vectors are **always orthogonal** (eigenvectors instead just need to be linearly independent)
 - singular values are always **non-negative**
 
-> [!note]+ **Details**
+> [!NOTE]
+> **Details**
 > Let $\boldsymbol{A}\in\mathbb{R}^{n\times m}$
 > From $\boldsymbol{A}$ we can build two **symmetric** (and positive semidefinite) matrices:
 > - the **left** one (size $n\times n$):
@@ -97,25 +107,31 @@ Key differences from eigendecomposition:
 > 
 > $\boldsymbol{U}\in\mathbb{R}^{n\times n}$ contains eigenvectors of $\boldsymbol{A}\boldsymbol{A}^{\top}$(left singular vectors)
 > $\boldsymbol{V}\in\mathbb{R}^{m\times m}$ contains eigenvectors of $\boldsymbol{A}^{\top}\boldsymbol{A}$ (right singular vectors)
-> > [!note] ✍️
-> > **therefore the SVD of **$\boldsymbol{A}$** is obtained by performing eigendecomposition of**
+> > [!NOTE]
+> > Therefore, the SVD of $\boldsymbol{A}$ is obtained by performing eigendecomposition of
 > > $\boldsymbol{A}\boldsymbol{A}^\top\quad \text{and} \quad\boldsymbol{A}^\top\boldsymbol{A}$,
-> > **and pairing their eigenvectors via the same non-zero eigenvalues.**
+> > and pairing their eigenvectors via the same non-zero eigenvalues.
 > 
-> - the** nonzero eigenvalues match **and are the squares of the singular values:
-> $\boldsymbol{\Lambda}=\operatorname{diag}(\lambda_1,\ldots,\lambda_r,0,\ldots),
+> - The **nonzero eigenvalues match** and are the squares of the singular values:
+>
+> $$
+> \boldsymbol{\Lambda}=\operatorname{diag}(\lambda_1,\ldots,\lambda_r,0,\ldots),
 > \qquad
-> \sigma_i=\sqrt{\lambda_i}$
+> \sigma_i=\sqrt{\lambda_i}
+> $$
+>
 > - Define
 > $\boldsymbol{\Sigma}\in\mathbb{R}^{n\times m}$
 > 
-> $\begin{bmatrix}
+> $$
+> \begin{bmatrix}
 > \sigma_1\\
 > &\sigma_2\\
 > &&\ddots\\
 > &&&\sigma_r\\
 > &&&&0
-> \end{bmatrix}$
+> \end{bmatrix}
+> $$
 > (with zeros elsewhere). Then the **singular value decomposition** is:
 > 
 > $\boldsymbol{A}=\boldsymbol{U}\,\boldsymbol{\Sigma}\,\boldsymbol{V}^{\top}$

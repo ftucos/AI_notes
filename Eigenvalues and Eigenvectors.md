@@ -19,25 +19,43 @@ Along each eigenvector direction, **all scalar multiples** of $\boldsymbol{v}$ a
 A matrix $\boldsymbol{A} \in \mathbb{R}^{n \times n}$ can have:
 - up to $n$ eigenvalues
 
-**Note: **Each distinct eigenvalue defines exactly one eigenspace, but **eigenspaces can have different dimensions**.
-The dimension of the eigenspace $E$* *associated with $\lambda$ (or equivalently the maximum number of linearly independent eigenvectors associated with $\lambda$), is referred to as the eigenvalue's **geometric multiplicity**
-$\gamma_A(\lambda)=n-\text{rank}(\boldsymbol{A}-\lambda\boldsymbol{I)}$
+**Note:** Each distinct eigenvalue defines exactly one eigenspace, but **eigenspaces can have different dimensions**.
+The dimension of the eigenspace $E$ associated with $\lambda$ (or equivalently the maximum number of linearly independent eigenvectors associated with $\lambda$), is referred to as the eigenvalue's **geometric multiplicity**
+$\gamma_A(\lambda)=n-\text{rank}(\boldsymbol{A}-\lambda\boldsymbol{I})$
 ### Examples
-- A **shear **$$\boldsymbol{S_1} =
-\begin{bmatrix}
-1 & 1 \\
-0 & 1
-\end{bmatrix}$$ has only one eigenvalue $\lambda=1$ and the dimension of the eigenspace is $\mathbb{R}^1$ (a line)
-- A **scale **$$\boldsymbol{S_2} =
-\begin{bmatrix}
-2 & 0 \\
-0 & 2
-\end{bmatrix}$$ has only one eigenvalue $\lambda=2$ and the dimension of the eigenspace is $\mathbb{R}^2$ (a space) because every vector in the 2d space preserves its orientation
-- A **rotation **$$\boldsymbol{R} =
-\begin{bmatrix}
-0 & -1 \\
-1 & 0
-\end{bmatrix}$$has no real eigenvalues and no real eigenspaces (only the null space $\mathbb{R}^0$ which is discarded by definition) since no real direction is preserved
+- A **shear**:
+
+  $$
+  \boldsymbol{S_1} =
+  \begin{bmatrix}
+  1 & 1 \\
+  0 & 1
+  \end{bmatrix}
+  $$
+
+  It has only one eigenvalue $\lambda=1$ and the dimension of the eigenspace is $\mathbb{R}^1$ (a line).
+- A **scale**:
+
+  $$
+  \boldsymbol{S_2} =
+  \begin{bmatrix}
+  2 & 0 \\
+  0 & 2
+  \end{bmatrix}
+  $$
+
+  It has only one eigenvalue $\lambda=2$ and the dimension of the eigenspace is $\mathbb{R}^2$ (a space) because every vector in the 2d space preserves its orientation.
+- A **rotation**:
+
+  $$
+  \boldsymbol{R} =
+  \begin{bmatrix}
+  0 & -1 \\
+  1 & 0
+  \end{bmatrix}
+  $$
+
+  It has no real eigenvalues and no real eigenspaces (only the null space $\mathbb{R}^0$ which is discarded by definition) since no real direction is preserved.
 
 ---
 ## **Zero eigenvalues**
@@ -79,7 +97,7 @@ EigResult(eigenvalues=array([1., 1.]),
 		  eigenvectors=array([[ 1.00000000e+00, -1.00000000e+00],
 							  [ 0.00000000e+00,  2.22044605e-16]]))
 ```
-NumPy returns eigenvalues with algebraic multiplicity and is forced to output $n$ vectors for an $\boldsymbol{A}\in \R^{n \times n}$ matrix, even when the matrix has fewer independent eigenvectors.
+NumPy returns eigenvalues with algebraic multiplicity and is forced to output $n$ vectors for an $\boldsymbol{A}\in \mathbb{R}^{n \times n}$ matrix, even when the matrix has fewer independent eigenvectors.
 ### **Algebraic vs geometric multiplicity**
 
 For an eigenvalue $\lambda$:
@@ -91,7 +109,8 @@ For an eigenvalue $\lambda$:
 
 Always:
 $1 \;\le\; \text{GM} \;\le\; \text{AM}$
-> [!note]+ **Example:** $\text{GM} = 2$, $\text{AM} = 2$
+> [!NOTE]
+> **Example:** $\text{GM} = 2$, $\text{AM} = 2$
 > $\boldsymbol{A}=\begin{pmatrix}2 & 0 \\0 & 2\end{pmatrix}$
 > $\det(\boldsymbol{A}-\lambda \boldsymbol{I})=0 \implies \det\begin{pmatrix}2-\lambda & 0 \\0-\lambda & 2-\lambda\end{pmatrix}=(2-\lambda)^2=0$
 > $\implies (2-\lambda)(2-\lambda)=0 \implies \begin{cases}\lambda - 2 = 0 \\ \lambda - 2 = 0\end{cases}$
@@ -101,7 +120,8 @@ $1 \;\le\; \text{GM} \;\le\; \text{AM}$
 > $\text{Geometric multiplicity} = \dim(\mathbb{R}^2) = 2$
 > 
 
-> [!note]+ **Example: **$\text{GM} = 1$**, **$\text{AM} = 2$
+> [!NOTE]
+> **Example:** $\text{GM} = 1$, $\text{AM} = 2$
 > $\boldsymbol{B}=\begin{pmatrix}2 & 1 \\0 & 2\end{pmatrix}$
 > $\det(\boldsymbol{B}-\lambda \boldsymbol{I})=0 \implies\det\begin{pmatrix}2-\lambda & 1 \\0 & 2-\lambda\end{pmatrix}=(2-\lambda)^2=0$
 > $\lambda = 2 \quad \text{with algebraic multiplicity } 2$
@@ -121,7 +141,7 @@ $\det(\boldsymbol{A}) = \prod_i \lambda_i$
 These relations hold regardless of whether the matrix is diagonalizable.
 
 ---
-## **Closed‑form solution for (**$2 \times 2$**) matrices**
+## Closed-form solution for $2 \times 2$ matrices
 For a $2 \times 2$ matrix:
 $\boldsymbol{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$
 Define:
@@ -129,25 +149,34 @@ $m = \dfrac{\lambda_1+\lambda_2}{2}=\dfrac{\mathrm{tr}(\boldsymbol{A})}{2} = \df
 $p = \lambda_1\cdot\lambda_2=\det(\boldsymbol{A}) = ad - bc$
 The eigenvalues are:
 $\lambda_{1,2} = m \pm \sqrt{m^2 - p}$
-> [!note]+ ### Example: pure 90° rotation in 2D and complex eigenvalues
+> [!NOTE]
+> **Example: pure 90° rotation in 2D and complex eigenvalues**
 > Consider a **pure 90° rotation** in 2D (counter-clockwise):
-> $\boldsymbol{R} =
+>
+> $$
+> \boldsymbol{R} =
 > \begin{bmatrix}
 > 0 & -1 \\
 > 1 & 0
-> \end{bmatrix}$
+> \end{bmatrix}
+> $$
+>
 > This transformation maps:
 > - the x-axis to the y-axis
 > - the y-axis to the negative x-axis
 > 
 > It preserves lengths and angles, but **no real direction remains invariant**.
 > We solve the characteristic equation:
-> $det(\boldsymbol{R} - \lambda \boldsymbol{I}) = 0 \implies \det
+>
+> $$
+> \det(\boldsymbol{R} - \lambda \boldsymbol{I}) = 0 \implies \det
 > \begin{bmatrix}
 > -\lambda & -1 \\
 > 1 & -\lambda
 > \end{bmatrix}
-> = \lambda^2 + 1 = 0$
+> = \lambda^2 + 1 = 0
+> $$
+>
 > Therefore, the matrix has **no real eigenvalues** and **no real eigenvectors**.
 > $\lambda_{1,2}=\pm \,i$
 > 

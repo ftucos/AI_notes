@@ -12,7 +12,8 @@ $\text{cov}(x,y)=\dfrac{1}{n}\displaystyle\sum_{i=1}^nx_iy_i$
 which becomes:
 $\boldsymbol\Sigma=\dfrac{1}{n}\boldsymbol{X}^\top\boldsymbol{X}$
 or $n-1$ for sample covariance
-> [!note]+ **Proof:**
+> [!NOTE]
+> **Proof:**
 > Take a $\boldsymbol{X} \in \mathbb{R}^{n \times p}$ matrix with $n=3$ observations and $p=2$ features. $x$ and $y$ identifies the two features of each observations. Could be also coords on a 2D plane. It leds for an easier notation for this example rather than using $x_{1,1}, x_{1,2}$
 > Assume the features are already mean-centered.
 > $\boldsymbol{X} =\begin{bmatrix}x_1 & y_1 \\x_2 & y_2 \\x_3 & y_3\end{bmatrix},\qquad\text{with }x_1+x_2+x_3 = 0,\;y_1+y_2+y_3 = 0$
@@ -28,12 +29,13 @@ Symmetric matrices have the following properties:
 - All eigenvector are orthogonal
 
 
-![[image 2.png]]
+![Covariance matrix geometry](images/image%202.png)
 
 The eigenvectors and eigenvalues describe the two main covariance components
-![[image 3.png]]
-![[image 4.png]]
-> [!note]+ ### Computing PCA with eigendecomposition in R
+![PCA eigenvectors](images/image%203.png)
+![PCA projection](images/image%204.png)
+> [!NOTE]
+> **Computing PCA with eigendecomposition in R**
 > ```bash
 > ## =========================
 > ## Data (example)
