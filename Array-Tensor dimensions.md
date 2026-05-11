@@ -24,7 +24,7 @@ Note that `np.array([3])` is still a 1d vector of length 1
 
 ```python
 >>> a = np.array([[3,5,7],
-									[11,13,17]])
+				  [11,13,17]])
 >>> a.shape
 (2,3)
 >>> a.ndim
@@ -58,14 +58,14 @@ array([3,6,7])
 >>> a = np.array([[3,6,7]])
 >>> a.T
 array([[3],
-			 [6],
-			 [7]])
+       [6],
+	   [7]])
 ```
 - Broadcasting
 
 ```python
 >>> a = np.array([[3,5,7],
-    							[11,13,17]])
+				  [11,13,17]])
 >>> a.shape
 (2,3)
 
