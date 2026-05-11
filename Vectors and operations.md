@@ -55,13 +55,23 @@ $$
 $$
 
 Where $\|\boldsymbol{a}\|$ and $\|\boldsymbol{b}\|$ are the magnitudes (lengths) of the respective vectors.
-***Note:**** Two vectors are orthogonal if and only if their dot product is zero*
+**Note:** **Two vectors are orthogonal if and only if their dot product is zero**
 > [!NOTE]
 > **Notation**
 > If the two vectors are indicated as matrices (column vectors), the dot product can also be indicated in the following form using matrix multiplication and transposition (pairwise dot products between columns)
-> $\boldsymbol{a}^\top \boldsymbol{b}=\begin{bmatrix}a_1 & a_2 & \dots & a_n\end{bmatrix}\begin{bmatrix}b_1 \\b_2 \\\vdots \\b_n\end{bmatrix}=\sum_{i=1}^{n} a_i b_i$
+> 
+> $$
+> \boldsymbol{a}^\top \boldsymbol{b}=\begin{bmatrix}a_1 & a_2 & \dots & a_n\end{bmatrix}\begin{bmatrix}b_1 \\
+> b_2 \\
+> \vdots \\
+> b_n\end{bmatrix}=\sum_{i=1}^{n} a_i b_i
+> $$
+> 
 > This is useful because when working with matrices, the dot product symbol should never be used, as it creates ambiguity.
-> Sometimes it is used to imply matrix multiplications (composition of linear transformations) $\boldsymbol{A}\cdot \boldsymbol{B} = \boldsymbol{A}\boldsymbol{B}$ which is different from $\boldsymbol{A}^\top\boldsymbol{B}$ 
+> Sometimes it is used to imply matrix multiplications (composition of linear transformations) $\boldsymbol{A}\cdot \boldsymbol{B} = \boldsymbol{A}\boldsymbol{B}$ which is different from $\boldsymbol{A}^\top\boldsymbol{B}$
+
+This is useful because when working with matrices, the dot product symbol should never be used, as it creates ambiguity.
+Sometimes it is used to imply matrix multiplications (composition of linear transformations) $\boldsymbol{A}\cdot \boldsymbol{B} = \boldsymbol{A}\boldsymbol{B}$ which is different from $\boldsymbol{A}^\top\boldsymbol{B}$ 
 
 
 In python you can achieve dot product with `numpy.cdot(a, b)` 
@@ -135,13 +145,39 @@ the order of the elements affects the direction of the resulting vector (right h
 
 > [!NOTE]
 > **Cross Product of Two Vectors Using Determinants**
-> $\boldsymbol{a} =\begin{bmatrix}a_1 \\a_2 \\0\end{bmatrix},\qquad\boldsymbol{b} =\begin{bmatrix}b_1 \\b_2 \\0\end{bmatrix}$
+> 
+> $$
+> \boldsymbol{a} =\begin{bmatrix}a_1 \\
+> a_2 \\0\end{bmatrix},\qquad\boldsymbol{b} =\begin{bmatrix}b_1 \\
+> b_2 \\
+> 0\end{bmatrix}
+> $$
+> 
 > Note: $a_3$ and $b_3$ have been set to 0 to make a simpler example where the two original vectors lie on the i/j plane
 > **let **$\boldsymbol{i}$**, **$\boldsymbol{j}$**, and **$\boldsymbol{k}$** be the canonical basis vectors**: a set of linearly independent vectors with one unit component and all others zero, used to define the standard coordinate system of the vector space
-> $\boldsymbol{i} =\begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix},\quad\boldsymbol{j} =\begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix},\quad\boldsymbol{k} =\begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix}$
+> 
+> $$
+> \boldsymbol{i} =\begin{bmatrix}1 \\
+> 0 \\
+> 0\end{bmatrix},\quad\boldsymbol{j} =\begin{bmatrix}0 \\
+> 1 \\
+> 0\end{bmatrix},\quad\boldsymbol{k} =\begin{bmatrix}0 \\
+> 0 \\
+> 1\end{bmatrix}
+> $$
+> 
 > The cross product is computed via determinant expansion:
-> $\boldsymbol{a} \times \boldsymbol{b}=\begin{vmatrix}\boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k} \\a_1 & a_2 & 0 \\b_1 & b_2 & 0\end{vmatrix} = \boldsymbol{i}\begin{vmatrix}a_2 & 0 \\b_2 & 0\end{vmatrix}-\boldsymbol{j}\begin{vmatrix}a_1 & 0 \\b_1 & 0\end{vmatrix}+\boldsymbol{k}\begin{vmatrix}a_1 & a_2 \\b_1 & b_2\end{vmatrix} = \left( a_1 b_2 - a_2 b_1 \right)\boldsymbol{k}$
-> In this example the $2 \times 2$ determinants multiplying $\boldsymbol{i}$ and $\boldsymbol{j}$ are **zero** because their columns are **linearly dependent, h**ence, those submatrices are **singular**, and their determinants vanish.
+>
+> $$
+> \boldsymbol{a} \times \boldsymbol{b}=\begin{vmatrix}\boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k} \\
+> a_1 & a_2 & 0 \\
+> b_1 & b_2 & 0\end{vmatrix} = \boldsymbol{i}\begin{vmatrix}a_2 & 0 \\
+> b_2 & 0\end{vmatrix}-\boldsymbol{j}\begin{vmatrix}a_1 & 0 \\
+> b_1 & 0\end{vmatrix}+\boldsymbol{k}\begin{vmatrix}a_1 & a_2 \\
+> b_1 & b_2\end{vmatrix} = \left( a_1 b_2 - a_2 b_1 \right)\boldsymbol{k}
+> $$
+> 
+> In this example the $2 \times 2$ determinants multiplying $\boldsymbol{i}$ and $\boldsymbol{j}$ are **zero** because their columns are **linearly dependent**, hence, those submatrices are **singular**, and their determinants vanish.
 
 
 **References**
