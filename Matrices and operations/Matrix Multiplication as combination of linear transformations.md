@@ -81,6 +81,7 @@ $$
 \color{orange}{-1}
 \end{bmatrix}
 $$
+
 This makes it very convenient in case of *linear* *transformations* (origin fixed, lines remain lines… if we add a fixed constant then that is referred to as an *affine* transformation) of the space. The linear transformation can be described by tracking the transformation of $\hat{i}$ and $\hat{j}$.
 E.g.
 
@@ -126,34 +127,45 @@ $$
 \color{orange}{-3}
 \end{bmatrix}
 $$
+
 Note: the convention is to read matrix multiplication from right to left; this is important because in matrix multiplication the order is crucial. In spatial transformations, changing the order of transformations changes the result. 
 
 $$
 g(f(\vec{v}))=\begin{bmatrix}
-1&2\\3&4
+1&2 \\
+3&4
 \end{bmatrix}\begin{bmatrix}
-5&6\\7&8
+5&6 \\
+7&8
 \end{bmatrix}\begin{bmatrix}
-x\\y
+x \\
+y
 \end{bmatrix}
 $$
+
 Note that matrix multiplication has the associative property: $A(BC)=(AB)C$. 
 you can think to matrix multiplication as composition of the two transformation so that $h(\vec{v})=g(f(\vec{v}))$
 
 $$
 h=\begin{bmatrix}
-1&2\\3&4
+1&2 \\
+3&4
 \end{bmatrix}\begin{bmatrix}
-5&6\\7&8
+5&6 \\
+7&8
 \end{bmatrix}=\begin{bmatrix}
 \begin{bmatrix}
-1&2\\3&4
+1&2 \\
+3&4
 \end{bmatrix}\begin{bmatrix}
-5\\7
+5 \\
+7
 \end{bmatrix}&\begin{bmatrix}
-1&2\\3&4
+1&2 \\
+3&4
 \end{bmatrix}\begin{bmatrix}
-6\\8
+6 \\
+8
 \end{bmatrix}
 \end{bmatrix}
 $$
@@ -192,30 +204,43 @@ $$
 $$
 
 $$
-\overbrace{\begin{bmatrix}
-2 & 5 & 3\\
-4 & 0 & 8\\
+\overbrace{
+\begin{bmatrix}
+2 & 5 & 3 \\
+4 & 0 & 8 \\
 1 & 3 & 0
-\end{bmatrix}}^{A}
-\;\;
-\overbrace{\begin{bmatrix}
-\color{blue}{x}\\[2pt] \color{red}{y}\\[2pt] \color{green}{z}
-\end{bmatrix}}^{\vec{x}}
-\;=\;
-\overbrace{\begin{bmatrix}
--3\\[2pt] 0\\[2pt] 2
-\end{bmatrix}}^{\vec{v}}
+\end{bmatrix}
+}^{A}
+\quad
+\overbrace{
+\begin{bmatrix}
+\color{blue}{x} \\
+\color{red}{y} \\
+\color{green}{z}
+\end{bmatrix}
+}^{\vec{x}}
+\quad = \quad
+\overbrace{
+\begin{bmatrix}
+-3 \\
+0 \\
+2
+\end{bmatrix}
+}^{\vec{v}}
 $$
+
 $A\vec{x}=\vec{v}$
 ## Inverse transformation
 $A^{-1}\vec{v}=\vec{x}$
 therefore the moltiplication the matrix and its inverse must be the identity matrix:
+
 $$
 AA^{-1}={\begin{bmatrix}
-1 & 0 & 0\\
-0 & 1 & 0\\
+1 & 0 & 0 \\
+0 & 1 & 0 \\
 0 & 0 & 1
 \end{bmatrix}}
 $$
+
 Se il determinante non è 0, esiste l’inverso della matrice e questo implica che c’è una sola soluzionte per l’equazione
 In alcuni casi con determinante 0 potrebbe esserci un inverso
