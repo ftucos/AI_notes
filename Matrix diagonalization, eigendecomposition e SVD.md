@@ -1,6 +1,3 @@
----
-
----
 In linear algebra, **factoring a matrix** means expressing it as a product of simpler matrices. This is done to reveal the geometric meaning of a linear transformation, or simplify computations
 
 **Diagonalizing** a square matrix (i.e. a linear transformation) means rewriting it as a sequence of three steps:

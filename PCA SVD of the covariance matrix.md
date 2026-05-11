@@ -1,6 +1,3 @@
----
-
----
 PCA can be defined as the eigenvalue of the covariance matrix.
 Can also be computed equivalently with singolar value decomposition
 

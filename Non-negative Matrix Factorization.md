@@ -1,6 +1,3 @@
----
-
----
 In linear algebra and data analysis, **Non-negative Matrix Factorization (NMF)** is a matrix factorization technique designed for **additive, parts-based representations**.
 Given a **non-negative matrix** $\boldsymbol{A}\in\mathbb{R}_{\ge 0}^{p\times n}$
 where you can think of $n$ as the number of samples and $p$ the number of features

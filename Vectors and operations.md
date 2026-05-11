@@ -1,6 +1,3 @@
----
-
----
 In linear algebra, vectors are defined as an ordered list of $n$ real numbers $(\in\mathbb{R})$ and usually denoted as $\mathbb{R}^n$
 ## Vector addition
 

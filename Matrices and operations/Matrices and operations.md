@@ -1,6 +1,3 @@
----
-
----
 In linear algebra, a **matrix** is a rectangular array of real numbers arranged in rows and columns. A matrix with *m* rows and *n* columns belongs to  $\mathbb{R}^{m\times n}$
 
 $$

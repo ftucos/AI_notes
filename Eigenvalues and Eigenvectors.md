@@ -1,6 +1,3 @@
----
-
----
 In linear algebra, a **square matrix** can be interpreted as a **linear transformation** of space. **Eigenvectors** are special vectors that, under this transformation, **do not change direction**, but are only **scaled**.
 The corresponding **eigenvalue** quantifies how much the eigenvector is stretched or compressed.
 Note: in linear transformations for an eigenvalue, there are infinite eigenvectors along the same axis so it would be better to refer to spans (vector sub-space) rather than vectors. 

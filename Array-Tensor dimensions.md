@@ -1,6 +1,3 @@
----
-
----
 Note: the logic of Numpy arrays also applies to tensors in`torch.tensor()`
 - **Scalar** (1D vector of length 1)
 

@@ -1,6 +1,3 @@
----
-
----
 ## Mat multiplication as linear transformation of coord system:
 reference coord system:
 

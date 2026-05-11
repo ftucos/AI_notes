@@ -1,6 +1,3 @@
----
-
----
 - **elementwise multiplication** (Hadamard product)
 $A \odot B = B\odot A$
 $\begin{bmatrix}2 & 3 & 1\\0 & 8 & -2\end{bmatrix}\odot\begin{bmatrix}3 & 1 & 4\\7 & 9 & 5\end{bmatrix}=\begin{bmatrix}2\times 3 & 3\times 1 & 1\times 4\\0\times 7 & 8\times 9 & -2\times 5\end{bmatrix}=\begin{bmatrix}6 & 3 & 4\\0 & 72 & -10\end{bmatrix}$
