@@ -22,35 +22,35 @@ $\gamma_A(\lambda)=n-\text{rank}(\boldsymbol{A}-\lambda\boldsymbol{I})$
 ### Examples
 - A **shear**:
 
-  $$
-  \boldsymbol{S_1} =
-  \begin{bmatrix}
-  1 & 1 \\
-  0 & 1
-  \end{bmatrix}
-  $$
+$$
+\boldsymbol{S_1} =
+\begin{bmatrix}
+1 & 1 \\
+0 & 1
+\end{bmatrix}
+$$
 
   It has only one eigenvalue $\lambda=1$ and the dimension of the eigenspace is $\mathbb{R}^1$ (a line).
 - A **scale**:
 
-  $$
-  \boldsymbol{S_2} =
-  \begin{bmatrix}
-  2 & 0 \\
-  0 & 2
-  \end{bmatrix}
-  $$
+$$
+\boldsymbol{S_2} =
+\begin{bmatrix}
+2 & 0 \\
+0 & 2
+\end{bmatrix}
+$$
 
   It has only one eigenvalue $\lambda=2$ and the dimension of the eigenspace is $\mathbb{R}^2$ (a space) because every vector in the 2d space preserves its orientation.
 - A **rotation**:
 
-  $$
-  \boldsymbol{R} =
-  \begin{bmatrix}
-  0 & -1 \\
-  1 & 0
-  \end{bmatrix}
-  $$
+$$
+\boldsymbol{R} =
+\begin{bmatrix}
+0 & -1 \\
+1 & 0
+\end{bmatrix}
+$$
 
   It has no real eigenvalues and no real eigenspaces (only the null space $\mathbb{R}^0$ which is discarded by definition) since no real direction is preserved.
 
@@ -108,23 +108,57 @@ Always:
 $1 \;\le\; \text{GM} \;\le\; \text{AM}$
 > [!NOTE]
 > **Example:** $\text{GM} = 2$, $\text{AM} = 2$
-> $\boldsymbol{A}=\begin{pmatrix}2 & 0 \\0 & 2\end{pmatrix}$
-> $\det(\boldsymbol{A}-\lambda \boldsymbol{I})=0 \implies \det\begin{pmatrix}2-\lambda & 0 \\0-\lambda & 2-\lambda\end{pmatrix}=(2-\lambda)^2=0$
-> $\implies (2-\lambda)(2-\lambda)=0 \implies \begin{cases}\lambda - 2 = 0 \\ \lambda - 2 = 0\end{cases}$
-> $\lambda = 2 \quad \text{with algebraic multiplicity } 2$
+>
+> $$
+> \boldsymbol{A}=\begin{pmatrix}2 & 0 \\
+> 0 & 2\end{pmatrix}
+> $$
 > 
-> $(\boldsymbol{A}-2\boldsymbol{I})\vec{\boldsymbol{v}}=\boldsymbol{0}\quad \implies 0\vec{\boldsymbol{v}}=0 \implies \vec{\boldsymbol{v}} \in \mathbb{R}^2$
-> $\text{Geometric multiplicity} = \dim(\mathbb{R}^2) = 2$
+> $$
+> \det(\boldsymbol{A}-\lambda \boldsymbol{I})=0 \implies \det\begin{pmatrix}2-\lambda & 0 \\
+> 0-\lambda & 2-\lambda\end{pmatrix}=(2-\lambda)^2=0
+> $$
 > 
+> $$
+> \implies (2-\lambda)(2-\lambda)=0 \implies \begin{cases}\lambda - 2 = 0 \\
+> \lambda - 2 = 0\end{cases}
+> $$
+> 
+> $> \lambda = 2 \quad \text{with algebraic multiplicity } 2$
+> 
+> $$
+> (\boldsymbol{A}-2\boldsymbol{I})\vec{\boldsymbol{v}}=\boldsymbol{0}\quad \implies 0\vec{\boldsymbol{v}}=0 \implies \vec{\boldsymbol{v}} \in \mathbb{R}^2$
+> $\text{Geometric multiplicity} = \dim(\mathbb{R}^2) = 2
+> $$
 
 > [!NOTE]
 > **Example:** $\text{GM} = 1$, $\text{AM} = 2$
-> $\boldsymbol{B}=\begin{pmatrix}2 & 1 \\0 & 2\end{pmatrix}$
-> $\det(\boldsymbol{B}-\lambda \boldsymbol{I})=0 \implies\det\begin{pmatrix}2-\lambda & 1 \\0 & 2-\lambda\end{pmatrix}=(2-\lambda)^2=0$
-> $\lambda = 2 \quad \text{with algebraic multiplicity } 2$
-> $(\boldsymbol{B}-2\boldsymbol{I})\vec{\boldsymbol{v}}=\begin{pmatrix}0 & 1 \\0 & 0\end{pmatrix}\vec{\boldsymbol{v}}=\boldsymbol{0}$
+>
+> $$
+> \boldsymbol{B}=\begin{pmatrix}2 & 1 \\
+> 0 & 2\end{pmatrix}
+> $$
+> 
+> $$
+> \det(\boldsymbol{B}-\lambda \boldsymbol{I})=0 \implies\det\begin{pmatrix}2-\lambda & 1 \\
+> 0 & 2-\lambda\end{pmatrix}=(2-\lambda)^2=0
+> $$
+> 
+> $$
+> \lambda = 2 \quad \text{with algebraic multiplicity } 2
+> $$
+> 
+> $$
+> (\boldsymbol{B}-2\boldsymbol{I})\vec{\boldsymbol{v}}=\begin{pmatrix}0 & 1 \\
+> 0 & 0\end{pmatrix}\vec{\boldsymbol{v}}=\boldsymbol{0}
+> $$
+> 
 > $\vec{v_2} = 0$
-> $\boldsymbol{v}=x\begin{pmatrix}1 \\0\end{pmatrix}\quad \Rightarrow \quad\text{Geometric multiplicity} = 1$
+>
+> $$
+> \boldsymbol{v}=x\begin{pmatrix}1 \\
+> 0\end{pmatrix}\quad \Rightarrow \quad\text{Geometric multiplicity} = 1
+> $$
 
 
 ---
@@ -140,7 +174,12 @@ These relations hold regardless of whether the matrix is diagonalizable.
 ---
 ## Closed-form solution for $2 \times 2$ matrices
 For a $2 \times 2$ matrix:
-$\boldsymbol{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$
+
+$$
+\boldsymbol{A} = \begin{bmatrix} a & b \\
+c & d \end{bmatrix}
+$$
+
 Define:
 $m = \dfrac{\lambda_1+\lambda_2}{2}=\dfrac{\mathrm{tr}(\boldsymbol{A})}{2} = \dfrac{a + d}{2}$
 $p = \lambda_1\cdot\lambda_2=\det(\boldsymbol{A}) = ad - bc$
