@@ -13,11 +13,31 @@ or $n-1$ for sample covariance
 > **Proof:**
 > Take a $\boldsymbol{X} \in \mathbb{R}^{n \times p}$ matrix with $n=3$ observations and $p=2$ features. $x$ and $y$ identifies the two features of each observations. Could be also coords on a 2D plane. It leds for an easier notation for this example rather than using $x_{1,1}, x_{1,2}$
 > Assume the features are already mean-centered.
-> $\boldsymbol{X} =\begin{bmatrix}x_1 & y_1 \\x_2 & y_2 \\x_3 & y_3\end{bmatrix},\qquad\text{with }x_1+x_2+x_3 = 0,\;y_1+y_2+y_3 = 0$
-> $\boldsymbol{X}^\top \boldsymbol{X}=\begin{bmatrix}x_1 & x_2 & x_3 \\y_1 & y_2 & y_3\end{bmatrix}\begin{bmatrix}x_1 & y_1 \\x_2 & y_2 \\x_3 & y_3\end{bmatrix}\implies$
-> $\boldsymbol{X}^\top \boldsymbol{X}=\begin{bmatrix}x_1^2 + x_2^2 + x_3^2&x_1y_1 + x_2y_2 + x_3y_3\\[6pt]x_1y_1 + x_2y_2 + x_3y_3&y_1^2 + y_2^2 + y_3^2\end{bmatrix}\implies$
-> $\boldsymbol\Sigma=\dfrac{1}{3} \boldsymbol{X}^\top \boldsymbol{X}=\begin{bmatrix}\frac{1}{3}\sum x_i^2&\frac{1}{3}\sum x_i y_i\\[6pt]\frac{1}{3}\sum x_i y_i&\frac{1}{3}\sum y_i^2\end{bmatrix}=\begin{bmatrix}\text{Var}(\boldsymbol{x}) & \text{Cov}(\boldsymbol{x},\boldsymbol{y})\\ \text{Cov}(\boldsymbol{x},\boldsymbol{y}) & \text{Var}(\boldsymbol{y})\end{bmatrix}$
-> Note: $\boldsymbol\Sigma$ is conventionally used for the **covariance matrix **which is different from the concept of **Summation **$\sum$
+>
+> $$
+> \boldsymbol{X} =\begin{bmatrix}x_1 & y_1 \\
+> x_2 & y_2 \\
+> x_3 & y_3\end{bmatrix},\qquad\text{with }x_1+x_2+x_3 = 0,\;y_1+y_2+y_3 = 0
+> $$
+>
+> $$
+> \boldsymbol{X}^\top \boldsymbol{X}=\begin{bmatrix}x_1 & x_2 & x_3 \\
+> y_1 & y_2 & y_3\end{bmatrix}\begin{bmatrix}x_1 & y_1 \\x_2 & y_2 \\
+> x_3 & y_3\end{bmatrix}\implies
+> $$
+>
+> $$
+> \boldsymbol{X}^\top \boldsymbol{X}=\begin{bmatrix}x_1^2 + x_2^2 + x_3^2&x_1y_1 + x_2y_2 + x_3y_3\\
+> [6pt]x_1y_1 + x_2y_2 + x_3y_3&y_1^2 + y_2^2 + y_3^2\end{bmatrix}\implies
+> $$
+>
+> $$
+> \boldsymbol\Sigma=\dfrac{1}{3} \boldsymbol{X}^\top \boldsymbol{X}=\begin{bmatrix}\frac{1}{3}\sum x_i^2&\frac{1}{3}\sum x_i y_i\\
+> [6pt]\frac{1}{3}\sum x_i y_i&\frac{1}{3}\sum y_i^2\end{bmatrix}=\begin{bmatrix}\text{Var}(\boldsymbol{x}) & \text{Cov}(\boldsymbol{x},\boldsymbol{y})\\
+> \text{Cov}(\boldsymbol{x},\boldsymbol{y}) & \text{Var}(\boldsymbol{y})\end{bmatrix}
+> $$
+> 
+> Note: $\boldsymbol\Sigma$ is conventionally used for the **covariance matrix** which is different from the concept of **Summation** $\sum$
 
 Note: covariance matrices are symmetric matrices
 $\boldsymbol{\Sigma}=\boldsymbol{\Sigma}^\top$
