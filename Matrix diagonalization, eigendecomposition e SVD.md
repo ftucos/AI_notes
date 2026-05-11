@@ -24,8 +24,7 @@ where:
 - $\boldsymbol{Q}^{-1}$: inverse change of basis
 
 $$
-\boldsymbol{A}
-=
+\boldsymbol{A}=
 \underbrace{\boldsymbol{Q}}_{\text{change basis}}\,
 \underbrace{\boldsymbol{\Lambda}}_{\text{scale axes}}\,
 \underbrace{\boldsymbol{Q}^{-1}}_{\text{restore basis}}
@@ -45,8 +44,7 @@ The **Singular Value Decomposition** is a more general matrix factorization that
 > Rectangular matrices can be conceptualized as transformations that suppress or appends some dimensions. SVD handles that
 >
 > $$
-> \boldsymbol{A}\boldsymbol{x} =
-> \begin{bmatrix}
+> \boldsymbol{A}\boldsymbol{x} =\begin{bmatrix}
 > 1 & 0 \\
 > 0 & 1 \\
 > 0 & 0
@@ -54,9 +52,7 @@ The **Singular Value Decomposition** is a more general matrix factorization that
 > \begin{bmatrix}
 > x_1 \\
 > x_2
-> \end{bmatrix}
-> =
-> \begin{bmatrix}
+> \end{bmatrix}=\begin{bmatrix}
 > x_1 \\
 > x_2 \\
 > 0
@@ -64,8 +60,7 @@ The **Singular Value Decomposition** is a more general matrix factorization that
 > $$
 >
 > $$
-> \boldsymbol{B}\boldsymbol{y} =
-> \begin{bmatrix}
+> \boldsymbol{B}\boldsymbol{y} =\begin{bmatrix}
 > 1 & 0 & 0 \\
 > 0 & 1 & 0
 > \end{bmatrix}
@@ -73,9 +68,7 @@ The **Singular Value Decomposition** is a more general matrix factorization that
 > y_1 \\
 > y_2 \\
 > y_3
-> \end{bmatrix}
-> =
-> \begin{bmatrix}
+> \end{bmatrix}=\begin{bmatrix}
 > y_1 \\
 > y_2
 > \end{bmatrix}
@@ -112,9 +105,9 @@ Key differences from eigendecomposition:
 > - The **nonzero eigenvalues match** and are the squares of the singular values:
 >
 > $$
-> \boldsymbol{\Lambda}=\operatorname{diag}(\lambda_1,\ldots,\lambda_r,0,\ldots),
-> \qquad
-> \sigma_i=\sqrt{\lambda_i}
+> \boldsymbol{\Lambda}=\mathrm{diag}(\lambda_1,\ldots,\lambda_r,0,\ldots),
+\qquad
+\sigma_i=\sqrt{\lambda_i}
 > $$
 >
 > - Define
@@ -122,13 +115,14 @@ Key differences from eigendecomposition:
 > 
 > $$
 > \begin{bmatrix}
-> \sigma_1\\
-> &\sigma_2\\
-> &&\ddots\\
-> &&&\sigma_r\\
+> \sigma_1 \\
+> &\sigma_2 \\
+> &&\ddots \\
+> &&&\sigma_r \\
 > &&&&0
 > \end{bmatrix}
 > $$
+> 
 > (with zeros elsewhere). Then the **singular value decomposition** is:
 > 
 > $\boldsymbol{A}=\boldsymbol{U}\,\boldsymbol{\Sigma}\,\boldsymbol{V}^{\top}$
